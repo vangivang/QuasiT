@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">QuasiT</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="status_update">Status Update</string>
+    <string name="timeline">Timeline</string>
+    <string name="button_update">Update!</string>
+    <string name="hint">Please enter your status here</string>
+    <string name="refresh_service">Refresh Timeline</string>
+    <string name="username">Username</string>
+    <string name="username_summary">Enter your login user</string>
+    <string name="password">Password</string>
+    <string name="password_summary">Enter your login password</string>
+    <string name="server">Server</string>
+    <string name="server_summary">Connect to this server</string>
+    <string name="preferences">Preferences</string>
+    <string name="update_delay">Update Delay</string>
+    <string name="update_delay_summary">How long between updates?</string>
+   
+    <string-array name="delay_string_values">
+        <item >Every 20 seconds</item>
+        <item >Every 15 minutes</item>
+        <item >Every 30 minutes</item>
+        <item >Every 1 hour</item>
+        <item >Every 12 hours</item>
+        <item >Every day</item>
+        <item >Manual update only</item>
+    </string-array>
+    
+    <string-array name="delay_time">
+        <item >20000</item>
+        <item >900000</item>
+        <item >1800000</item>
+        <item >3600000</item>
+        <item >43200000</item>
+        <item >86400000</item>
+        <item >-1</item>
+    </string-array>
+        <string name="add_status">Status Update</string>
+
+</resources>

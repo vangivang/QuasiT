@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.quasit"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name="com.example.quasit.QuasitApp"
+        android:allowBackup="true"
+        android:icon="@drawable/icon_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.quasit.OpenningActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.quasit.StatusActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.quasit.TimeLineActivity"
+            android:label="TimeLine"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.quasit.PrefsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.quasit.MenuScreenActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service android:name="com.example.quasit.UpdaterService" >
+        </service>
+        <service
+            android:name="com.example.quasit.RefreshService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.example.quasit.RefreshService" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.example.quasit.RefreshScheduleReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="com.example.quasit.BootFilter" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.example.quasit.StatusProvider"
+            android:authorities="com.example.quasit.provider"
+            android:exported="false" >
+        </provider>
+    </application>
+
+</manifest>
